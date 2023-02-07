@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-const useCounter = (initialState = 4) => {
+const useCounter = (incrementState, decrementState) => {
   const [count, setCount] = useState(0);
 
   const incrementHandler = () => {
-    setCount((prevState) => prevState + initialState);
+    setCount((prevState) => prevState + incrementState);
   };
 
   const decrementHandler = () => {
     if (count > 0) {
-      setCount((prevState) => prevState - initialState);
+      setCount((prevState) => prevState - decrementState);
     }
   };
 

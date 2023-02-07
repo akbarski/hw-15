@@ -28,6 +28,7 @@ const Timer = () => {
         size="small"
         variant="outlined"
         type="number"
+        min={1}
         value={value}
         onChange={onChange}
       />

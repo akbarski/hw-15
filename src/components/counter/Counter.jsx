@@ -5,7 +5,7 @@ import useCounter from "../../hooks/useCounter";
 
 const Counter = () => {
   const { count, incrementHandler, decrementHandler, resetHandler } =
-    useCounter(2);
+    useCounter(4, 2);
 
   return (
     <Container>

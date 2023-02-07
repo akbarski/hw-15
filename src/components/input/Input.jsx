@@ -8,6 +8,12 @@ const Input = () => {
   const password = useInput("", "password");
   const date = useInput("", "date");
 
+  const onValide = {
+    email: email.validate,
+    password: password.validate,
+    date: date.validate,
+  };
+
   return (
     <Container>
       <InputContainer>
@@ -18,9 +24,9 @@ const Input = () => {
           id="email"
           value={email.value}
           onChange={email.onChange}
-          onBlur={email.validate}
+          onBlur={onValide.email}
         />
-        <Button variant="outlined" color="success" onClick={email.validate}>
+        <Button variant="outlined" color="success" onClick={onValide.email}>
           submit
         </Button>
         {email.error && <Error>{email.error}</Error>}
@@ -33,9 +39,9 @@ const Input = () => {
           id="password"
           value={password.value}
           onChange={password.onChange}
-          onBlur={password.validate}
+          onBlur={onValide.password}
         />
-        <Button variant="outlined" color="success" onClick={password.validate}>
+        <Button variant="outlined" color="success" onClick={onValide.password}>
           submit
         </Button>
         {email.error && <Error>{password.error}</Error>}
@@ -48,9 +54,9 @@ const Input = () => {
           id="date"
           value={date.value}
           onChange={date.onChange}
-          onBlur={date.validate}
+          onBlur={onValide.date}
         />
-        <Button variant="outlined" color="success" onClick={date.validate}>
+        <Button variant="outlined" color="success" onClick={onValide.date}>
           submit
         </Button>
         {email.error && <Error>{date.error}</Error>}
