@@ -10,10 +10,10 @@ const Counter = () => {
   return (
     <Container>
       <h1>{count}</h1>
-      <Button variant="outlined" color="primary" onClick={incrementHandler}>
+      <Button variant="outlined" color="inherit" onClick={incrementHandler}>
         increment
       </Button>
-      <Button variant="outlined" color="secondary" onClick={decrementHandler}>
+      <Button variant="outlined" color="inherit" onClick={decrementHandler}>
         decrement
       </Button>
       <Button variant="outlined" color="error" onClick={resetHandler}>

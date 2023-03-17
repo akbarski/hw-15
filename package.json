@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://AziatAbd.github.io/HW-15-customHooks",
+  "homepage": "https://akbarski.github.io/HW-15-customHooks",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
